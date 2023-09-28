@@ -1,4 +1,4 @@
-import {StyleSheet, TextStyle, ViewStyle} from 'react-native'
+import {StyleSheet} from 'react-native'
 
 enum FontSize {
   xx_small = 10,
@@ -46,6 +46,13 @@ const lightColors: Record<ColorsTypes, string> = {
   ...baseColors,
 }
 
+const menuItemColors = {
+  profile: '#ffd670',
+  explore: '#70d6ff',
+  record: '#ff9770',
+  create: '#2a9d8f',
+}
+
 const darkColors: Record<ColorsTypes, string> = {
   [ColorsTypes.primary]: '#90e0ef',
   [ColorsTypes.secondary]: '#023e8a',
@@ -53,7 +60,7 @@ const darkColors: Record<ColorsTypes, string> = {
   ...baseColors,
 }
 
-const globalTextStyles: Record<string, TextStyle> = StyleSheet.create({
+const globalTextStyles = StyleSheet.create({
   p: {
     fontSize: FontSize.default,
     fontWeight: 'bold',
@@ -92,7 +99,7 @@ const globalTextStyles: Record<string, TextStyle> = StyleSheet.create({
   },
 })
 
-const globalLayoutStyles: Record<string, ViewStyle> = StyleSheet.create({
+const globalLayoutStyles = StyleSheet.create({
   f1: {
     flex: 1,
   },
@@ -109,4 +116,16 @@ const globalLayoutStyles: Record<string, ViewStyle> = StyleSheet.create({
   },
 })
 
-export {globalTextStyles, globalLayoutStyles, lightColors, darkColors}
+const spacings = {
+  xs: 4,
+  s: 8,
+  sm: 12,
+  m: 16,
+  ml: 20,
+  l: 24,
+  xl: 32,
+  xxl: 48,
+  xxxl: 64,
+}
+
+export {globalTextStyles, globalLayoutStyles, lightColors, darkColors, spacings, menuItemColors}
